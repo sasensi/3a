@@ -1,0 +1,90 @@
+# USE CASES
+
+user
+    view random image
+        enter site
+            view events
+            view about preview
+                view about details
+            reset scroll
+admin
+    login with facebook
+        update site
+            go back to site
+    update about
+
+
+# SEQUENCES
+
+update site
+- user load /update.html
+- ask user confirmation + infos about process
+- user confirms
+- redirect to facebook login
+- if not already logged/app accepted
+    - ask for login/permissions
+- token is stored in cookies
+- redirect to /update.php
+- check facebook login
+- if unexpected user
+    - show error message
+- get datas from facebook
+    - get events
+    - get albums
+- build model
+    - only keep random album + event related ones
+- save model
+- show success message
+
+update about
+- download /api/about.html
+- update file
+- upload file
+
+
+# MODEL
+
+{
+    images: [{
+        url: string
+        legend: string
+    }, ...]
+
+    events: [{
+        start: int
+        end: int
+        name: string
+        description: string
+        cover: string
+        images: string[]
+    }, ...]
+}
+
+
+# API
+
+GET /api/datas.php
+=> {
+       images: [{
+           url: string
+           legend: string
+       }, ...]
+
+       events: [{
+           start: int
+           end: int
+           name: string
+           description: string
+           cover: string
+           images: string[]
+       }, ...]
+
+       about: string
+   }
+
+
+# SITE MAP
+
+/index.html
+/update.html
+/api/datas.php
