@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        * {
+            box-sizing : border-box;
+        }
+
+        html,
+        body {
+            margin  : 0;
+            padding : 0;
+        }
+
+        header {
+            height           : 80px;
+            background-color : lightgrey;
+        }
+
+        div {
+            height          : 80px;
+            /*background      : lightblue;*/
+            display         : flex;
+            align-items     : center;
+            justify-content : center;
+            font-size       : 50px;
+            opacity         : .75;
+        }
+
+        div.big {
+            height : 160px;
+        }
+
+        div.hidden {
+            opacity : 0;
+        }
+
+        aside {
+            height           : 80px;
+            width            : 80px;
+            position         : fixed;
+            top              : 0;
+            left             : 0;
+            background-color : black;
+        }
+    </style>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/leafo/sticky-kit/v1.1.2/jquery.sticky-kit.min.js"></script>
+    <script>
+        $(document).ready(function ()
+        {
+            $('div').stick_in_parent({
+                offset_top: 80,
+                bottoming : false
+            })
+            .on('sticky_kit:stick', function ()
+            {
+                $(this).parent().prev('section').find('div').addClass('hidden');
+            })
+            .on('sticky_kit:unstick', function ()
+            {
+                $(this).parent().prev('section').find('div').removeClass('hidden');
+            })
+            ;
+        });
+    </script>
+</head>
+<body>
+<header></header>
+<aside></aside>
+<main>
+    <section>
+        <div>1</div>
+        <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur cumque debitis enim et, ex expedita fugit ipsa, nihil numquam odit optio possimus ratione repellat rerum, similique voluptates. Adipisci eum ex quaerat quia repellendus similique? Accusamus alias autem cumque debitis, deleniti deserunt dolor dolorem dolores ducimus eaque earum enim eveniet ex exercitationem expedita illo itaque laboriosam laborum laudantium magni maxime necessitatibus neque nostrum odit omnis placeat quam quia quibusdam quod, sequi similique sit sunt unde veniam vitae voluptatem voluptatibus? Asperiores atque autem beatae corporis cumque dicta eveniet expedita fugit impedit iste iusto, libero maiores minima molestiae neque possimus quasi sapiente sequi, sit suscipit! Blanditiis commodi excepturi libero nemo quod. Blanditiis cupiditate debitis dolore doloremque eaque illum ipsa ipsum molestias natus odit provident, quam quas quod rem repudiandae, totam unde. Alias autem cumque deleniti, id ipsa libero molestiae, nam necessitatibus odio perspiciatis quae qui quidem quis quod sint tempore unde voluptatem!</p>
+        <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur cumque debitis enim et, ex expedita fugit ipsa, nihil numquam odit optio possimus ratione repellat rerum, similique voluptates. Adipisci eum ex quaerat quia repellendus similique? Accusamus alias autem cumque debitis, deleniti deserunt dolor dolorem dolores ducimus eaque earum enim eveniet ex exercitationem expedita illo itaque laboriosam laborum laudantium magni maxime necessitatibus neque nostrum odit omnis placeat quam quia quibusdam quod, sequi similique sit sunt unde veniam vitae voluptatem voluptatibus? Asperiores atque autem beatae corporis cumque dicta eveniet expedita fugit impedit iste iusto, libero maiores minima molestiae neque possimus quasi sapiente sequi, sit suscipit! Blanditiis commodi excepturi libero nemo quod. Blanditiis cupiditate debitis dolore doloremque eaque illum ipsa ipsum molestias natus odit provident, quam quas quod rem repudiandae, totam unde. Alias autem cumque deleniti, id ipsa libero molestiae, nam necessitatibus odio perspiciatis quae qui quidem quis quod sint tempore unde voluptatem!</p>
+    </section>
+    <section>
+        <div>2</div>
+        <p>2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur cumque debitis enim et, ex expedita fugit ipsa, nihil numquam odit optio possimus ratione repellat rerum, similique voluptates. Adipisci eum ex quaerat quia repellendus similique? Accusamus alias autem cumque debitis, deleniti deserunt dolor dolorem dolores ducimus eaque earum enim eveniet ex exercitationem expedita illo itaque laboriosam laborum laudantium magni maxime necessitatibus neque nostrum odit omnis placeat quam quia quibusdam quod, sequi similique sit sunt unde veniam vitae voluptatem voluptatibus? Asperiores atque autem beatae corporis cumque dicta eveniet expedita fugit impedit iste iusto, libero maiores minima molestiae neque possimus quasi sapiente sequi, sit suscipit! Blanditiis commodi excepturi libero nemo quod. Blanditiis cupiditate debitis dolore doloremque eaque illum ipsa ipsum molestias natus odit provident, quam quas quod rem repudiandae, totam unde. Alias autem cumque deleniti, id ipsa libero molestiae, nam necessitatibus odio perspiciatis quae qui quidem quis quod sint tempore unde voluptatem!</p>
+        <p>2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur cumque debitis enim et, ex expedita fugit ipsa, nihil numquam odit optio possimus ratione repellat rerum, similique voluptates. Adipisci eum ex quaerat quia repellendus similique? Accusamus alias autem cumque debitis, deleniti deserunt dolor dolorem dolores ducimus eaque earum enim eveniet ex exercitationem expedita illo itaque laboriosam laborum laudantium magni maxime necessitatibus neque nostrum odit omnis placeat quam quia quibusdam quod, sequi similique sit sunt unde veniam vitae voluptatem voluptatibus? Asperiores atque autem beatae corporis cumque dicta eveniet expedita fugit impedit iste iusto, libero maiores minima molestiae neque possimus quasi sapiente sequi, sit suscipit! Blanditiis commodi excepturi libero nemo quod. Blanditiis cupiditate debitis dolore doloremque eaque illum ipsa ipsum molestias natus odit provident, quam quas quod rem repudiandae, totam unde. Alias autem cumque deleniti, id ipsa libero molestiae, nam necessitatibus odio perspiciatis quae qui quidem quis quod sint tempore unde voluptatem!</p>
+    </section>
+    <section>
+        <div>3</div>
+        <p>3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur cumque debitis enim et, ex expedita fugit ipsa, nihil numquam odit optio possimus ratione repellat rerum, similique voluptates. Adipisci eum ex quaerat quia repellendus similique? Accusamus alias autem cumque debitis, deleniti deserunt dolor dolorem dolores ducimus eaque earum enim eveniet ex exercitationem expedita illo itaque laboriosam laborum laudantium magni maxime necessitatibus neque nostrum odit omnis placeat quam quia quibusdam quod, sequi similique sit sunt unde veniam vitae voluptatem voluptatibus? Asperiores atque autem beatae corporis cumque dicta eveniet expedita fugit impedit iste iusto, libero maiores minima molestiae neque possimus quasi sapiente sequi, sit suscipit! Blanditiis commodi excepturi libero nemo quod. Blanditiis cupiditate debitis dolore doloremque eaque illum ipsa ipsum molestias natus odit provident, quam quas quod rem repudiandae, totam unde. Alias autem cumque deleniti, id ipsa libero molestiae, nam necessitatibus odio perspiciatis quae qui quidem quis quod sint tempore unde voluptatem!</p>
+        <p>3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur cumque debitis enim et, ex expedita fugit ipsa, nihil numquam odit optio possimus ratione repellat rerum, similique voluptates. Adipisci eum ex quaerat quia repellendus similique? Accusamus alias autem cumque debitis, deleniti deserunt dolor dolorem dolores ducimus eaque earum enim eveniet ex exercitationem expedita illo itaque laboriosam laborum laudantium magni maxime necessitatibus neque nostrum odit omnis placeat quam quia quibusdam quod, sequi similique sit sunt unde veniam vitae voluptatem voluptatibus? Asperiores atque autem beatae corporis cumque dicta eveniet expedita fugit impedit iste iusto, libero maiores minima molestiae neque possimus quasi sapiente sequi, sit suscipit! Blanditiis commodi excepturi libero nemo quod. Blanditiis cupiditate debitis dolore doloremque eaque illum ipsa ipsum molestias natus odit provident, quam quas quod rem repudiandae, totam unde. Alias autem cumque deleniti, id ipsa libero molestiae, nam necessitatibus odio perspiciatis quae qui quidem quis quod sint tempore unde voluptatem!</p>
+    </section>
+</main>
+</body>
+</html>
