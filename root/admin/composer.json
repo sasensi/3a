@@ -1,0 +1,7 @@
+{
+  "name"       : "3a",
+  "description": "3a admin",
+  "require"    : {
+    "facebook/graph-sdk": "*"
+  }
+}

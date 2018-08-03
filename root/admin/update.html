@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mise à jour du site</title>
+</head>
+<body>
+
+<h1>Mise à jour du site</h1>
+<p>Pour mettre à jour le site, vous devez vous connecter avec un profil facebook qui est:</p>
+<ul>
+    <li>administrateur de la page</li>
+    <li>testeur de l'application</li>
+</ul>
+<button onclick="update();">mettre à jour le site</button>
+
+<script>
+    function update()
+    {
+        window.fbAsyncInit = function ()
+        {
+            FB.init({
+                appId  : '2090066521259797',
+                cookie : true, // This is important, it's not enabled by default
+                version: 'v3.1'
+            });
+
+            FB.login(
+                function (response)
+                {
+                    if (response.authResponse)
+                    {
+                        location.href = 'update.php';
+                    }
+                    else
+                    {
+                        alert('La connexion a fecbook a échoué.');
+                    }
+                },
+                {scope: 'manage_pages'}
+            );
+            return false;
+        };
+
+        (function (d, s, id)
+        {
+            var js, fjs = d.getElementsByTagName(s)[ 0 ];
+            if (d.getElementById(id))
+            {return;}
+            js     = d.createElement(s);
+            js.id  = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    }
+</script>
+</body>
+</html>
