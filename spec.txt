@@ -86,5 +86,5 @@ GET /api/datas.php
 # SITE MAP
 
 /index.html
-/update.html
+/admin/update.html
 /api/datas.php
