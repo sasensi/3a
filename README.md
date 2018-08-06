@@ -16,7 +16,7 @@ docker run --rm -it ^
     -p 8080:80 ^
     -v %cd%/root:/var/www/html ^
     -e ENABLE_XDEBUG=1 ^
-    -e XDEBUG_CONFIG=remote_host=192.168.0.13 ^
+    -e XDEBUG_CONFIG=remote_host=192.168.1.17 ^
     --name 3a-server ^
     richarvey/nginx-php-fpm
 ```
