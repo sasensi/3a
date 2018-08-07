@@ -25,7 +25,27 @@ cd ./front
 npm run serve
 ```
 
-visit `http://localhost:4200`
+open [http://localhost:4200](http://localhost:4200)
+
+
+## test
+
+### e2e
+```
+npm run test
+npm run e2e
+```
+
+#### with debugging
+
+- first add `debugger;` in test script
+- make sure dev servers are running
+- run `npm run e2e:debug`
+- open [chrome://inspect/#devices](chrome://inspect/#devices)
+- click on target
+- devtools should pause, press `F8`
+- debugger should pause where you wanted to
+- do debug
 
 
 ## build

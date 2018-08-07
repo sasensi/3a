@@ -1,14 +1,21 @@
-import { AppPage } from './app.po';
+import { browser, by, element } from 'protractor';
 
-describe('workspace-project App', () => {
-  let page: AppPage;
+describe('App', () =>
+{
+    beforeEach(async () =>
+    {
+        await browser.get('/');
+    });
 
-  beforeEach(() => {
-    page = new AppPage();
-  });
+    it('should always show 3A as title', async () =>
+    {
+        const titles = await element.all(by.css('h1')).map(el => el.getText());
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to front!');
-  });
+        expect(titles).toEqual([ '3', 'A' ]);
+    });
+
+    it('should display random image component when user enter', async () =>
+    {
+        expect(await element(by.css('app-random-image')).isPresent()).toBe(true);
+    });
 });
