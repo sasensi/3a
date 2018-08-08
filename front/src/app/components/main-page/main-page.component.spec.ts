@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { ScrollService } from '../../services/scroll.service';
 
 import { MainPageComponent } from './main-page.component';
 import datasMock from '../../models/datas.mock';
@@ -15,6 +16,7 @@ describe('MainPageComponent', () =>
     {
         TestBed.configureTestingModule({
                    declarations: [ MainPageComponent ],
+
                })
                .compileComponents();
     }));
@@ -89,6 +91,19 @@ describe('MainPageComponent', () =>
                 expect(images).toEqual(event.images);
             }
         });
+    });
+
+    it('should scroll to about preview after view init', () =>
+    {
+        const scrollService       = TestBed.get(ScrollService) as ScrollService;
+        const aboutPreviewElement = fixture.debugElement.query(By.css('header')).nativeElement;
+        spyOn(scrollService, 'scrollToElement');
+
+        // manually call angular hooks
+        component.ngOnInit();
+        component.ngAfterViewInit();
+
+        expect(scrollService.scrollToElement).toHaveBeenCalledWith(aboutPreviewElement);
     });
 
 

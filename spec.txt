@@ -102,7 +102,7 @@ x first element is about detail, followed by about preview
 x about is followed by event list
 x future event cover picture is displayed
 x past events memory pictures are displayed
-- on enter, scroll is not at about preview but not at page top
+x on enter, scroll is at about preview
 
 # interactions
 x clicking on random image makes image disappear and main page appear
