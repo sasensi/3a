@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DatasModel } from './models/datas.model';
 import { DatasProviderService } from './services/datas-provider.service';
+import { ScrollService } from './services/scroll.service';
 
 @Component({
     selector   : 'app-root',
@@ -10,16 +11,21 @@ import { DatasProviderService } from './services/datas-provider.service';
 export class AppComponent
 {
     datas: DatasModel;
-
     userEntered = false;
 
-    constructor ( private datasProviderService: DatasProviderService )
+    constructor ( private datasProviderService: DatasProviderService,
+                  private scrollService: ScrollService )
     {
         this.datasProviderService.getDatas().subscribe(datas => this.datas = datas);
     }
 
-    onImageClicked()
+    onImageClicked ()
     {
         this.userEntered = true;
+    }
+
+    scrollToAboutPreview ()
+    {
+        this.scrollService.scrollToAbout();
     }
 }

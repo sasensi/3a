@@ -10,7 +10,7 @@ export class ScrollService
     {
     }
 
-    scrollToElement ( element: HTMLElement )
+    scrollToAbout ()
     {
         // todo: implement
     }

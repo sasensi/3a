@@ -95,15 +95,14 @@ describe('MainPageComponent', () =>
 
     it('should scroll to about preview after view init', () =>
     {
-        const scrollService       = TestBed.get(ScrollService) as ScrollService;
-        const aboutPreviewElement = fixture.debugElement.query(By.css('header')).nativeElement;
-        spyOn(scrollService, 'scrollToElement');
+        const scrollService = TestBed.get(ScrollService) as ScrollService;
+        spyOn(scrollService, 'scrollToAbout');
 
         // manually call angular hooks
         component.ngOnInit();
         component.ngAfterViewInit();
 
-        expect(scrollService.scrollToElement).toHaveBeenCalledWith(aboutPreviewElement);
+        expect(scrollService.scrollToAbout).toHaveBeenCalled();
     });
 
     it('should scroll to top when about preview is clicked', () =>
