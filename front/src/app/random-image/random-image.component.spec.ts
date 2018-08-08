@@ -1,24 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import datasMock from '../models/datas.mock';
 import { ImageModel } from '../models/image.model';
 
 import { RandomImageComponent } from './random-image.component';
 
 describe('RandomImageComponent', () =>
 {
-    const images: ImageModel[] = [
-        {
-            url   : 'http://www.fake.com/images1.jpg',
-            legend: 'image n°1',
-        },
-        {
-            url   : 'http://www.fake.com/images2.jpg',
-            legend: 'image n°2',
-        },
-        {
-            url   : 'http://www.fake.com/images3.jpg',
-            legend: 'image n°3',
-        },
-    ];
+    const images: ImageModel[] = datasMock.images;
 
     let component: RandomImageComponent;
     let fixture: ComponentFixture<RandomImageComponent>;

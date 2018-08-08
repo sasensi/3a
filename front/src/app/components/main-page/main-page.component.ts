@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { DatasModel } from '../../models/datas.model';
+import { EventModel } from '../../models/event.model';
+import * as moment from 'moment';
 
 @Component({
     selector   : 'app-main-page',
@@ -7,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit
 {
+    @Input() datas: DatasModel;
 
     constructor ()
     {
@@ -16,4 +20,19 @@ export class MainPageComponent implements OnInit
     {
     }
 
+    getEventImages ( event: EventModel )
+    {
+        const now           = moment();
+        const eventIsPassed = moment.unix(event.end).isBefore(now);
+
+        // future
+        if (!eventIsPassed)
+        {
+            return [ event.cover ];
+        }
+        // passed
+        {
+            return event.images;
+        }
+    }
 }
