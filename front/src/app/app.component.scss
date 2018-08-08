@@ -1,0 +1,46 @@
+header {
+    position : fixed;
+    top      : 0;
+    left     : 0;
+    width    : 100%;
+
+    div {
+        max-width : 530px;
+        margin    : auto;
+        position  : relative;
+
+        h1 {
+            position    : absolute;
+            top         : 7px;
+            font-family : 'Trois A Chiffre Regular', sans-serif;
+            font-size   : 18px;
+            line-height : 105px;
+            cursor      : pointer;
+            height      : 65px;
+
+            &:first-child {
+                left : 0;
+            }
+
+            &:last-child {
+                right : 0;
+            }
+        }
+    }
+}
+
+main {
+    max-width : 530px;
+    margin    : auto;
+
+    div {
+        margin-left  : 30px;
+        margin-right : 30px;
+    }
+}
+
+app-main-page {
+    display      : block;
+    margin-left  : 2px;
+    margin-right : 2px;
+}

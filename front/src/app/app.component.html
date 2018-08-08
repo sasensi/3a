@@ -1,4 +1,12 @@
-<h1 (click)="scrollToAboutPreview()">3</h1>
-<h1 (click)="scrollToAboutPreview()">A</h1>
-<app-random-image *ngIf="!userEntered" [images]="datas?.images" (imageClicked)="onImageClicked()"></app-random-image>
-<app-main-page *ngIf="userEntered"></app-main-page>
+<header>
+    <div>
+        <h1 (click)="scrollToAboutPreview()">3</h1>
+        <h1 (click)="scrollToAboutPreview()">A</h1>
+    </div>
+</header>
+<main>
+    <div>
+        <app-random-image *ngIf="!userEntered" [images]="datas?.images" (imageClicked)="onImageClicked()"></app-random-image>
+        <app-main-page *ngIf="userEntered"></app-main-page>
+    </div>
+</main>

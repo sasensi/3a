@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/styles/reset.css";
+@import "assets/fonts/font.css";
+
+body {
+    font-family : 'Hershey Times Regular', sans-serif;
+    font-size   : 18px;
+    line-height : 1.2;
+    text-align  : justify;
+    hyphens     : auto;
+}
