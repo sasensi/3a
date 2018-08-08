@@ -64,7 +64,7 @@ describe('RandomImageComponent', () =>
             const [ otherFixture, otherComponent ] = createComponent();
             otherDisplayedImage                    = getDisplayedImage(otherFixture);
 
-            if (otherDisplayedImage !== displayedImage)
+            if (JSON.stringify(otherDisplayedImage) !== JSON.stringify(displayedImage))
             {
                 break;
             }
