@@ -1,3 +1,4 @@
 <h1>3</h1>
 <h1>A</h1>
-<app-random-image [images]="datas?.images"></app-random-image>
+<app-random-image *ngIf="!userEntered" [images]="datas?.images" (imageClicked)="onImageClicked()"></app-random-image>
+<app-main-page *ngIf="userEntered"></app-main-page>

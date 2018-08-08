@@ -1,4 +1,4 @@
 <ng-container *ngIf="image">
-    <img [src]="image.url">
+    <img [src]="image.url" (click)="imageClicked.emit()">
     <legend>{{image.legend}}</legend>
 </ng-container>

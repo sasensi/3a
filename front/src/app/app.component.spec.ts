@@ -1,6 +1,23 @@
+import { HttpClient } from '@angular/common/http';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { TestBed, async } from '@angular/core/testing';
+import { Observable, of } from 'rxjs';
 import { AppComponent } from './app.component';
+import { DatasModel } from './models/datas.model';
 import { RandomImageComponent } from './random-image/random-image.component';
+import { DatasProviderService } from './services/datas-provider.service';
+
+class DatasProviderServiceMock
+{
+    getDatas (): Observable<DatasModel>
+    {
+        return of({
+            events: [],
+            images: [],
+            about : '',
+        });
+    }
+}
 
 describe('AppComponent', () =>
 {
@@ -9,8 +26,9 @@ describe('AppComponent', () =>
         TestBed.configureTestingModule({
             declarations: [
                 AppComponent,
-                RandomImageComponent,
             ],
+            providers   : [ { provide: DatasProviderService, useClass: DatasProviderServiceMock } ],
+            schemas     : [ NO_ERRORS_SCHEMA ],
         }).compileComponents();
     }));
     it('should create the app', async(() =>

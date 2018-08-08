@@ -1,0 +1,27 @@
+{
+  "expression": "/api/datas.php",
+  "method"    : "GET",
+  "responses" : {
+    "main": {
+      "default": true,
+      "data"   : {
+        "events": [],
+        "images": [
+          {
+            "url"   : "http://www.fake.com/images1.jpg",
+            "legend": "image n°1"
+          },
+          {
+            "url"   : "http://www.fake.com/images2.jpg",
+            "legend": "image n°2"
+          },
+          {
+            "url"   : "http://www.fake.com/images3.jpg",
+            "legend": "image n°3"
+          }
+        ],
+        "about" : "a fake text about the site"
+      }
+    }
+  }
+}
