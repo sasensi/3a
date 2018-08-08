@@ -43,4 +43,9 @@ export class MainPageComponent implements OnInit, AfterViewInit
             return event.images;
         }
     }
+
+    scrollTop ()
+    {
+        this.scrollService.scrollTop();
+    }
 }

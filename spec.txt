@@ -107,4 +107,4 @@ x on enter, scroll is at about preview
 # interactions
 x clicking on random image makes image disappear and main page appear
 - clicking on 3 or A when main page is displayed make site scroll to about preview
-- clicking on about preview make site scroll to top
+x clicking on about preview make site scroll to top

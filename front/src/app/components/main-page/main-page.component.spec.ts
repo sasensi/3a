@@ -106,6 +106,18 @@ describe('MainPageComponent', () =>
         expect(scrollService.scrollToElement).toHaveBeenCalledWith(aboutPreviewElement);
     });
 
+    it('should scroll to top when about preview is clicked', () =>
+    {
+        const scrollService    = TestBed.get(ScrollService) as ScrollService;
+        const aboutPreviewNode = fixture.debugElement.query(By.css('header'));
+        spyOn(scrollService, 'scrollTop');
+
+        // click on about preview
+        aboutPreviewNode.triggerEventHandler('click', null);
+
+        expect(scrollService.scrollTop).toHaveBeenCalled();
+    });
+
 
     //
     // UTILS
