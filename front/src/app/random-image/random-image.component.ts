@@ -4,7 +4,7 @@ import { ImageModel } from '../models/image.model';
 @Component({
     selector   : 'app-random-image',
     templateUrl: './random-image.component.html',
-    styleUrls  : [ './random-image.component.css' ],
+    styleUrls  : [ './random-image.component.scss' ],
 })
 export class RandomImageComponent implements OnInit
 {
