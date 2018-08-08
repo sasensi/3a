@@ -11,7 +11,8 @@ import { ScrollService } from './services/scroll.service';
 export class AppComponent
 {
     datas: DatasModel;
-    userEntered = false;
+    // debug
+    userEntered = true;
 
     constructor ( private datasProviderService: DatasProviderService,
                   private scrollService: ScrollService )

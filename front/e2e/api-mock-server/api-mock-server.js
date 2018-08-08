@@ -7,9 +7,10 @@ const port = 9001;
 
 // register api calls mocks
 ngApimock.run({
-    "src"      : "e2e/api-mock-server/mocks",
-    "outputDir": "e2e/api-mock-server/interface",
+    src      : 'e2e/api-mock-server/mocks',
+    outputDir: 'e2e/api-mock-server/interface',
 });
+ngApimock.watch('e2e/api-mock-server/mocks');
 
 // process api calls through ng-apimock
 app.use(require('ng-apimock/lib/utils').ngApimockRequest);

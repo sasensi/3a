@@ -7,6 +7,6 @@
 <main>
     <div>
         <app-random-image *ngIf="!userEntered" [images]="datas?.images" (imageClicked)="onImageClicked()"></app-random-image>
-        <app-main-page *ngIf="userEntered"></app-main-page>
+        <app-main-page *ngIf="userEntered" [datas]="datas"></app-main-page>
     </div>
 </main>
