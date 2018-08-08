@@ -8,7 +8,7 @@
         "events": [
           {
             "name"       : "event 1",
-            "description": "description of the event 1",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, asperiores at debitis distinctio eaque eligendi est excepturi expedita iusto magni odio optio pariatur, quae sint tempora! Debitis dolorem expedita id laboriosam magnam necessitatibus nobis possimus quaerat similique voluptatum. A autem ea, incidunt iure iusto optio perferendis quisquam soluta suscipit voluptate?\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, asperiores at debitis distinctio eaque eligendi est excepturi expedita iusto magni odio optio pariatur, quae sint tempora! Debitis dolorem expedita id laboriosam magnam necessitatibus nobis possimus quaerat similique voluptatum. A autem ea, incidunt iure iusto optio perferendis quisquam soluta suscipit voluptate?",
             "start"      : 18881888880,
             "end"        : 18881889880,
             "cover"      : "https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg",
@@ -36,6 +36,7 @@
             "cover"      : "https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg",
             "images"     : [
               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT94i5oLwtVw4VKAW-3RjzyOYAu5d0Bl1EJ2aRsFaLso2mBIWMWIw",
+              "https://i.pinimg.com/736x/02/4e/ba/024eba0048df1de90f5af2aacb448dc5.jpg",
               "https://www.pxwall.com/wp-content/uploads/2018/06/Stock%20Images%20love%20image,%20heart,%20HD,%20island,%20ocean,%20Stock%20Images%206378311261.jpg"
             ]
           }

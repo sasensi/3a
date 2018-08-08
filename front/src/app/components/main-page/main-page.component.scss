@@ -9,3 +9,25 @@ h3 {
     position       : relative;
     top            : 23px;
 }
+
+h2, h4 {
+    display : inline;
+}
+
+h2 {
+    font-weight : 700;
+}
+
+// image wrapper
+div + div {
+    display        : flex;
+    align-items    : center;
+    flex-direction : column;
+}
+
+img {
+    max-width     : 100%;
+    max-height    : 466px;
+    margin-top    : 3px;
+    margin-bottom : 3px;
+}
