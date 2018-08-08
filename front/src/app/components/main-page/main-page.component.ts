@@ -25,7 +25,7 @@ export class MainPageComponent implements OnInit, AfterViewInit
 
     ngAfterViewInit ()
     {
-        this.scrollService.scrollToAbout(this.aboutPreview.nativeElement);
+        this.scrollService.scrollToAbout();
     }
 
     getEventImages ( event: EventModel )
