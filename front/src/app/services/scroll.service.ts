@@ -1,5 +1,7 @@
 import { ElementRef, Injectable } from '@angular/core';
 
+declare const $: any;
+
 @Injectable({
     providedIn: 'root',
 })
@@ -10,13 +12,20 @@ export class ScrollService
     {
     }
 
-    scrollToAbout ()
+    scrollToAbout ( animate = true )
     {
-        // todo: implement
+        let options = {
+            offset: 16,
+        } as any;
+        if (animate)
+        {
+            options.duration = 500;
+        }
+        $('body').scrollTo('#aboutPreview', options);
     }
 
     scrollTop ()
     {
-        // todo: implement
+        $('body').scrollTo(0, { duration: 500 });
     }
 }
