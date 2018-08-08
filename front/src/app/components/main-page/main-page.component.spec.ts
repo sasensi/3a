@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { Nl2BrPipeModule } from 'nl2br-pipe';
 import { ScrollService } from '../../services/scroll.service';
 
 import { MainPageComponent } from './main-page.component';
@@ -16,7 +17,7 @@ describe('MainPageComponent', () =>
     {
         TestBed.configureTestingModule({
                    declarations: [ MainPageComponent ],
-
+                   imports     : [ Nl2BrPipeModule ],
                })
                .compileComponents();
     }));

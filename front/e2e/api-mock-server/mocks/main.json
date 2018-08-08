@@ -55,7 +55,7 @@
             "legend": "image n°3"
           }
         ],
-        "about" : "a fake text about the site"
+        "about" : "<p>a fake text about the site</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, asperiores at debitis distinctio eaque eligendi est excepturi expedita iusto magni odio optio pariatur, quae sint tempora!</p>"
       }
     }
   }
