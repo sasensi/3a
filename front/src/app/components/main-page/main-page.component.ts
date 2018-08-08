@@ -49,17 +49,6 @@ export class MainPageComponent implements OnInit, AfterViewInit
         this.scrollService.scrollTop();
     }
 
-    eventLastLessThanOneDay ( event: EventModel ): boolean
-    {
-        const durationInDays = moment.unix(event.end).diff(moment.unix(event.start), 'days');
-        return durationInDays < 1;
-    }
-
-    formatOneDayEventDate ( event: EventModel ): string
-    {
-        return moment.unix(event.start).format('DD/MM/YYYY-HH:mm') + '>' + moment.unix(event.end).format('HH:mm');
-    }
-
     formatEventDate ( event: EventModel ): string
     {
         const start = moment.unix(event.start);
@@ -68,7 +57,7 @@ export class MainPageComponent implements OnInit, AfterViewInit
         // one day
         if (end.diff(start, 'days') < 1)
         {
-            return start.format('DD/MM/YYYY-HH:mm') + '>' + end.format('HH:mm');
+            return start.format('DD/MM/YYYY-HH[h]mm') + '>' + end.format('HH[h]mm');
         }
         // multiple days
         else
