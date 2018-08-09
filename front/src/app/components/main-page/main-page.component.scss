@@ -1,5 +1,6 @@
 header {
-    cursor : pointer;
+    cursor        : pointer;
+    margin-bottom : 2px;
 
     &:hover {
         text-decoration : underline;
@@ -16,6 +17,11 @@ h3 {
     letter-spacing : 1.18px;
     position       : relative;
     top            : 23px;
+    text-align     : center;
+
+    &.hidden {
+        opacity : 0;
+    }
 }
 
 h2, h4 {

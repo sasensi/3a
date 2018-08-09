@@ -3,7 +3,7 @@
     <br/>Trois a est un espace de travail partagé et de programmation artistique épisodique, situé au 3A, rue de Turin, dans le quartier Bonnefoy, à Toulouse.
 </header>
 <ul>
-    <li *ngFor="let event of datas?.events">
+    <li #eventWrapper *ngFor="let event of datas?.events">
         <h3>{{formatEventDate(event)}}</h3>
         <div>
             <h2>{{event.name}}</h2>

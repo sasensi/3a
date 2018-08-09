@@ -1,8 +1,19 @@
-import { AfterContentInit, AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import {
+    AfterContentInit,
+    AfterViewInit,
+    Component,
+    ElementRef,
+    Input,
+    OnInit, QueryList,
+    ViewChild,
+    ViewChildren,
+} from '@angular/core';
 import { DatasModel } from '../../models/datas.model';
 import { EventModel } from '../../models/event.model';
 import * as moment from 'moment';
 import { ScrollService } from '../../services/scroll.service';
+
+declare const $: any;
 
 @Component({
     selector   : 'app-main-page',
@@ -14,8 +25,10 @@ export class MainPageComponent implements OnInit, AfterViewInit
     @Input() datas: DatasModel;
 
     @ViewChild('aboutPreview') aboutPreview: ElementRef;
+    @ViewChildren('eventWrapper') eventWrappers: QueryList<ElementRef>;
 
-    constructor ( private scrollService: ScrollService )
+    constructor ( private scrollService: ScrollService,
+                  private elementRef: ElementRef )
     {
     }
 
@@ -30,6 +43,31 @@ export class MainPageComponent implements OnInit, AfterViewInit
         {
             this.scrollService.scrollToAbout(false);
         }, 50);
+
+        // add sticky effect on dates
+        // wait for list to be rendered
+        this.eventWrappers.changes.subscribe(() =>
+        {
+            // debug
+            console.log($(this.elementRef.nativeElement)
+                .find('h3'));
+
+            $(this.elementRef.nativeElement)
+                .find('h3')
+                .stick_in_parent({
+                    offset_top: 93,
+                    bottoming : false,
+                })
+                .on('sticky_kit:stick', function ()
+                {
+                    $(this).parent().prev('li').find('h3').addClass('hidden');
+                })
+                .on('sticky_kit:unstick', function ()
+                {
+                    $(this).parent().prev('li').find('h3').removeClass('hidden');
+                })
+            ;
+        });
     }
 
     getEventImages ( event: EventModel )
