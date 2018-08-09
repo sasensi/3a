@@ -90,7 +90,7 @@ GET /api/datas.php
 # SITE MAP
 
 /index.html
-/admin/update.html
+/admin/index.html
 /api/datas.php
 
 
