@@ -5,8 +5,12 @@ const datasMock: DatasModel = {
         {
             name       : 'event 1',
             description: 'description of the event 1',
-            start      : 18881888880,
-            end        : 18881889880,
+            dates      : [
+                {
+                    start: 18881888880,
+                    end  : 18881889880,
+                },
+            ],
             cover      : 'https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg',
             images     : [
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT94i5oLwtVw4VKAW-3RjzyOYAu5d0Bl1EJ2aRsFaLso2mBIWMWIw',
@@ -16,8 +20,12 @@ const datasMock: DatasModel = {
         {
             name       : 'event 2',
             description: 'description of the event 2',
-            start      : 18882888880,
-            end        : 18882889880,
+            dates      : [
+                {
+                    start: 18882888880,
+                    end  : 18882889880,
+                },
+            ],
             cover      : 'https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg',
             images     : [
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT94i5oLwtVw4VKAW-3RjzyOYAu5d0Bl1EJ2aRsFaLso2mBIWMWIw',
@@ -27,8 +35,12 @@ const datasMock: DatasModel = {
         {
             name       : 'event 3',
             description: 'description of the event 3',
-            start      : 188838888,
-            end        : 188838898,
+            dates      : [
+                {
+                    start: 188838888,
+                    end  : 188838898,
+                },
+            ],
             cover      : 'https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg',
             images     : [
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT94i5oLwtVw4VKAW-3RjzyOYAu5d0Bl1EJ2aRsFaLso2mBIWMWIw',

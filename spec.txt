@@ -51,8 +51,10 @@ update about
     }, ...]
 
     events: [{
-        start: int
-        end: int
+        dates: [{
+            start: int
+            end: int
+        }, ...]
         name: string
         description: string
         cover: string
@@ -71,8 +73,10 @@ GET /api/datas.php
        }, ...]
 
        events: [{
-           start: int
-           end: int
+           dates: [{
+               start: int
+               end: int
+           }, ...]
            name: string
            description: string
            cover: string

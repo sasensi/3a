@@ -65,7 +65,7 @@ export class MainPageComponent implements OnInit, AfterViewInit
     getEventImages ( event: EventModel )
     {
         const now           = moment();
-        const eventIsPassed = moment.unix(event.end).isBefore(now);
+        const eventIsPassed = moment.unix(event.dates[ event.dates.length - 1 ].end).isBefore(now);
 
         // future
         if (!eventIsPassed)
@@ -83,10 +83,10 @@ export class MainPageComponent implements OnInit, AfterViewInit
         this.scrollService.scrollTop();
     }
 
-    formatEventDate ( event: EventModel ): string
+    formatEventDate ( date: { start: number, end: number } ): string
     {
-        const start = moment.unix(event.start);
-        const end   = moment.unix(event.end);
+        const start = moment.unix(date.start);
+        const end   = moment.unix(date.end);
 
         // one day
         if (end.diff(start, 'days') < 1)

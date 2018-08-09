@@ -79,7 +79,7 @@ describe('MainPageComponent', () =>
         {
             const images        = eventNode.queryAll(By.css('img')).map(imageNode => imageNode.nativeElement.src);
             const event         = datasMock.events[ index ];
-            const eventIsPassed = moment.unix(event.end).isBefore(now);
+            const eventIsPassed = moment.unix(event.dates[event.dates.length-1].end).isBefore(now);
 
             // future
             if (!eventIsPassed)

@@ -10,7 +10,7 @@ header {
 h3 {
     font-family    : 'Trois A Chiffre Regular', sans-serif;
     font-size      : 18px;
-    line-height    : 3.6;
+    line-height    : 3.65;
     white-space    : nowrap;
     margin-left    : -32px;
     margin-right   : -32px;
@@ -21,6 +21,10 @@ h3 {
 
     &.hidden {
         opacity : 0;
+    }
+
+    > span {
+        display : block;
     }
 }
 

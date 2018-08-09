@@ -1,7 +1,9 @@
 export interface EventModel
 {
-    start: number
-    end: number
+    dates: {
+        start: number
+        end: number
+    }[]
     name: string
     description: string
     cover: string

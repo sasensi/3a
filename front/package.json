@@ -5,10 +5,10 @@
     "serve": "ng serve --port 4200 --proxy-config proxy.conf.json",
     "build": "ng build --prod --output-path=build --base-href / && gulp build",
     "test": "ng test",
-    "e2e:serve": "ng serve --port 4201 --proxy-config proxy.conf.e2e.json",
+    "e2e:serve:front": "ng serve --port 4201 --proxy-config proxy.conf.e2e.json",
+    "e2e:serve:back": "node e2e/api-mock-server/api-mock-server.js",
     "e2e:run": "node node_modules/protractor/bin/protractor e2e/protractor.conf.js",
-    "e2e:debug": "node --inspect-brk node_modules/protractor/bin/protractor e2e/protractor.conf.js",
-    "api-mock-server": "node e2e/api-mock-server/api-mock-server.js"
+    "e2e:debug": "node --inspect-brk node_modules/protractor/bin/protractor e2e/protractor.conf.js"
   },
   "private": true,
   "dependencies": {

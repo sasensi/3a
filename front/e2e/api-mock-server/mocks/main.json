@@ -9,8 +9,12 @@
           {
             "name"       : "event 1",
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, asperiores at debitis distinctio eaque eligendi est excepturi expedita iusto magni odio optio pariatur, quae sint tempora! Debitis dolorem expedita id laboriosam magnam necessitatibus nobis possimus quaerat similique voluptatum. A autem ea, incidunt iure iusto optio perferendis quisquam soluta suscipit voluptate?\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, asperiores at debitis distinctio eaque eligendi est excepturi expedita iusto magni odio optio pariatur, quae sint tempora! Debitis dolorem expedita id laboriosam magnam necessitatibus nobis possimus quaerat similique voluptatum. A autem ea, incidunt iure iusto optio perferendis quisquam soluta suscipit voluptate?",
-            "start"      : 18881888880,
-            "end"        : 18881889880,
+            "dates"      : [
+              {
+                "start": 18881888880,
+                "end"  : 18881889880
+              }
+            ],
             "cover"      : "https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg",
             "images"     : [
               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT94i5oLwtVw4VKAW-3RjzyOYAu5d0Bl1EJ2aRsFaLso2mBIWMWIw",
@@ -20,8 +24,16 @@
           {
             "name"       : "event 2",
             "description": "description of the event 2",
-            "start"      : 18882888880,
-            "end"        : 18882889880,
+            "dates"      : [
+              {
+                "start": 18882888880,
+                "end"  : 18882889880
+              },
+              {
+                "start": 18882988880,
+                "end"  : 18882989880
+              }
+            ],
             "cover"      : "https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg",
             "images"     : [
               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT94i5oLwtVw4VKAW-3RjzyOYAu5d0Bl1EJ2aRsFaLso2mBIWMWIw",
@@ -31,8 +43,12 @@
           {
             "name"       : "event 3",
             "description": "description of the event 3",
-            "start"      : 188838888,
-            "end"        : 188938898,
+            "dates"      : [
+              {
+                "start": 188838888,
+                "end"  : 188938898
+              }
+            ],
             "cover"      : "https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg",
             "images"     : [
               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT94i5oLwtVw4VKAW-3RjzyOYAu5d0Bl1EJ2aRsFaLso2mBIWMWIw",
