@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { DatasModel } from '../../models/datas.model';
 import { EventModel } from '../../models/event.model';
 import * as moment from 'moment';
@@ -25,7 +25,11 @@ export class MainPageComponent implements OnInit, AfterViewInit
 
     ngAfterViewInit ()
     {
-        this.scrollService.scrollToAbout(false);
+        // add a slight delay before setting scroll to make sure content is really loaded
+        window.setTimeout(() =>
+        {
+            this.scrollService.scrollToAbout(false);
+        }, 50);
     }
 
     getEventImages ( event: EventModel )
