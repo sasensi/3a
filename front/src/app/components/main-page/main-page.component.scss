@@ -1,5 +1,9 @@
 header {
     cursor : pointer;
+
+    &:hover {
+        text-decoration : underline;
+    }
 }
 
 h3 {
