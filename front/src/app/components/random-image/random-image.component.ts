@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ImageModel } from '../models/image.model';
+import { ImageModel } from '../../models/image.model';
 
 @Component({
     selector   : 'app-random-image',

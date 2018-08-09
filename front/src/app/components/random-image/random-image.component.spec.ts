@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import datasMock from '../models/datas.mock';
-import { ImageModel } from '../models/image.model';
+import datasMock from '../../models/datas.mock';
+import { ImageModel } from '../../models/image.model';
 
 import { RandomImageComponent } from './random-image.component';
 

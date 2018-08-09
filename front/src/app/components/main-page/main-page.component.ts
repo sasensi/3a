@@ -45,29 +45,21 @@ export class MainPageComponent implements OnInit, AfterViewInit
         }, 50);
 
         // add sticky effect on dates
-        // wait for list to be rendered
-        this.eventWrappers.changes.subscribe(() =>
-        {
-            // debug
-            console.log($(this.elementRef.nativeElement)
-                .find('h3'));
-
-            $(this.elementRef.nativeElement)
-                .find('h3')
-                .stick_in_parent({
-                    offset_top: 93,
-                    bottoming : false,
-                })
-                .on('sticky_kit:stick', function ()
-                {
-                    $(this).parent().prev('li').find('h3').addClass('hidden');
-                })
-                .on('sticky_kit:unstick', function ()
-                {
-                    $(this).parent().prev('li').find('h3').removeClass('hidden');
-                })
-            ;
-        });
+        $(this.elementRef.nativeElement)
+            .find('h3')
+            .stick_in_parent({
+                offset_top: 93,
+                bottoming : false,
+            })
+            .on('sticky_kit:stick', function ()
+            {
+                $(this).parent().prev('li').find('h3').addClass('hidden');
+            })
+            .on('sticky_kit:unstick', function ()
+            {
+                $(this).parent().prev('li').find('h3').removeClass('hidden');
+            })
+        ;
     }
 
     getEventImages ( event: EventModel )

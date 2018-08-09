@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { Nl2BrPipeModule } from 'nl2br-pipe';
 import { ScrollService } from '../../services/scroll.service';
@@ -94,17 +94,23 @@ describe('MainPageComponent', () =>
         });
     });
 
-    it('should scroll to about preview after view init', () =>
+    it('should scroll to about preview after view init', fakeAsync(() =>
     {
         const scrollService = TestBed.get(ScrollService) as ScrollService;
         spyOn(scrollService, 'scrollToAbout');
 
-        // manually call angular hooks
-        component.ngOnInit();
+        // manually call angular hook
         component.ngAfterViewInit();
 
+        // make sure spy has not already been called
+        expect(scrollService.scrollToAbout).not.toHaveBeenCalled();
+
+        // advance time
+        tick(50);
+
+        // check spy was called
         expect(scrollService.scrollToAbout).toHaveBeenCalled();
-    });
+    }));
 
     it('should scroll to top when about preview is clicked', () =>
     {

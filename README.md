@@ -13,7 +13,7 @@ npm install
 ### launch servers
 ```
 docker run --rm -it ^
-    -p 8080:80 ^
+    -p 9002:80 ^
     -v %cd%/public:/var/www/html ^
     -e ENABLE_XDEBUG=1 ^
     -e XDEBUG_CONFIG=remote_host=192.168.1.17 ^

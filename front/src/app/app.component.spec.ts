@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import datasMock from './models/datas.mock';
 import { DatasModel } from './models/datas.model';
-import { RandomImageComponent } from './random-image/random-image.component';
+import { RandomImageComponent } from './components/random-image/random-image.component';
 import { DatasProviderService } from './services/datas-provider.service';
 import { ScrollService } from './services/scroll.service';
 
