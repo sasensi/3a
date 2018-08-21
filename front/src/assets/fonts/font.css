@@ -1,10 +1,10 @@
 @font-face {
-    font-family : 'Hershey Times Regular';
+    font-family : 'Hershey Times';
     src         : url('./hershey_times-Regular.otf');
 }
 
 @font-face {
-    font-family : 'Hershey Times Bold';
+    font-family : 'Hershey Times';
     src         : url('./hershey_times-Bold.otf');
     font-weight : 700;
 }
