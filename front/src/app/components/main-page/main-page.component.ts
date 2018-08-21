@@ -78,9 +78,16 @@ export class MainPageComponent implements OnInit, AfterViewInit
         }
     }
 
-    scrollTop ()
+    onClickOnAboutPreview ()
     {
-        this.scrollService.scrollTop();
+        if (this.scrollService.scrollIsAboveAbout())
+        {
+            this.scrollService.scrollToAbout();
+        }
+        else
+        {
+            this.scrollService.scrollTop();
+        }
     }
 
     formatEventDate ( date: { start: number, end: number } ): string

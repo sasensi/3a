@@ -14,9 +14,7 @@ export class ScrollService
 
     scrollToAbout ( animate = true )
     {
-        let options = {
-            offset: 16,
-        } as any;
+        let options = { axis: 'y' } as any;
         if (animate)
         {
             options.duration = 500;
@@ -26,6 +24,16 @@ export class ScrollService
 
     scrollTop ()
     {
-        $('body').scrollTo(0, { duration: 500 });
+        $('body').scrollTo(0, { axis: 'y', duration: 500 });
+    }
+
+    scrollIsAboveAbout (): boolean
+    {
+        const aboutPreviewScrollTop = $('#aboutPreview').offset().top;
+        const currentScroll         = $(window).scrollTop();
+
+        console.log('about', aboutPreviewScrollTop, 'window', currentScroll, currentScroll < aboutPreviewScrollTop);
+
+        return currentScroll < aboutPreviewScrollTop;
     }
 }
