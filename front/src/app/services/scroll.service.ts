@@ -29,10 +29,8 @@ export class ScrollService
 
     scrollIsAboveAbout (): boolean
     {
-        const aboutPreviewScrollTop = $('#aboutPreview').offset().top;
+        const aboutPreviewScrollTop = Math.floor($('#aboutPreview').offset().top);
         const currentScroll         = $(window).scrollTop();
-
-        console.log('about', aboutPreviewScrollTop, 'window', currentScroll, currentScroll < aboutPreviewScrollTop);
 
         return currentScroll < aboutPreviewScrollTop;
     }
