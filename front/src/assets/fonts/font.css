@@ -12,13 +12,3 @@
     font-family : 'Trois A Chiffre Regular';
     src         : url('./trois_a_chiffre-Regular.otf');
 }
-
-@font-face {
-    font-family : 'Trois A Chiffre Test';
-    src         : url('./trois_a_chiffre_web-Regular.otf');
-}
-
-@font-face {
-    font-family : 'Trois A Chiffre Test';
-    src         : url('./trois_a_chiffre_web-Regular.otf');
-}
