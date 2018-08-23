@@ -2,20 +2,17 @@ header {
     position : fixed;
     top      : 0;
     left     : 0;
-    z-index  : -1;
+    z-index  : 1;
     width    : 100%;
 
-    div {
+    > div {
         max-width : 540px;
         margin    : auto;
         position  : relative;
-        height    : 70px;
 
-        h1 {
-            position    : absolute;
-            bottom      : 0;
-            line-height : 64px;
-            cursor      : pointer;
+        div {
+            position : absolute;
+            height   : 70px;
 
             &:first-child {
                 left : 5px;
@@ -23,6 +20,16 @@ header {
 
             &:last-child {
                 right : 5px;
+                h1 {
+                    right : 0;
+                }
+            }
+
+            h1 {
+                position    : absolute;
+                bottom      : 0;
+                line-height : 64px;
+                cursor      : pointer;
             }
         }
     }
