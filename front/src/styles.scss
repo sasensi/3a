@@ -2,13 +2,21 @@
 @import "assets/styles/reset.css";
 @import "assets/styles/scrollbar.css";
 
+// fix mobile native scroll bug
+html, body {
+    overflow-x : hidden;
+}
+
+body {
+    position : relative;
+}
+
 body {
     font-family : 'Hershey Times', sans-serif;
     font-size   : 18px;
     line-height : 1.2;
     text-align  : justify;
     hyphens     : auto;
-    overflow-x  : hidden;
 }
 
 .custom-font {
