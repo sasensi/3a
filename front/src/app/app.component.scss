@@ -13,11 +13,10 @@ header {
         h1 {
             position    : absolute;
             top         : 7px;
-            font-family : 'Trois A Chiffre Regular', sans-serif;
+            font-family : 'Trois A Chiffre Test', serif;
             font-size   : 18px;
-            line-height : 105px;
+            line-height : 64px;
             cursor      : pointer;
-            height      : 65px;
 
             &:first-child {
                 left : 0;

@@ -48,7 +48,7 @@ export class MainPageComponent implements OnInit, AfterViewInit
         $(this.elementRef.nativeElement)
             .find('h3')
             .stick_in_parent({
-                offset_top: 93,
+                offset_top: 72,
                 bottoming : false,
             })
             .on('sticky_kit:stick', function ()
