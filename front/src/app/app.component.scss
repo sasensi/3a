@@ -53,7 +53,7 @@ app-main-page {
 }
 
 @media all and (max-width : 550px) {
-    header div h1 {
+    header > div div h1 {
         line-height : 12vw;
     }
 
