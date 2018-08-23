@@ -13,8 +13,6 @@ header {
 }
 
 h3 {
-    font-family    : 'Trois A Chiffre Test', sans-serif;
-    font-size      : 18px;
     line-height    : 3.65;
     white-space    : nowrap;
     margin-left    : -32px;
@@ -52,4 +50,10 @@ img {
     max-height    : 466px;
     margin-top    : 3px;
     margin-bottom : 3px;
+}
+
+@media all and (max-width : 550px) {
+    h3 {
+        letter-spacing : 0.27vw;
+    }
 }

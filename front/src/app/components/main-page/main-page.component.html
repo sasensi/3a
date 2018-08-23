@@ -4,7 +4,7 @@
 </header>
 <ul>
     <li #eventWrapper *ngFor="let event of datas?.events">
-        <h3>
+        <h3 class="custom-font">
             <span *ngFor="let date of event.dates">{{formatEventDate(date)}}</span>
         </h3>
         <div>

@@ -8,6 +8,22 @@ body {
     line-height : 1.2;
     text-align  : justify;
     hyphens     : auto;
-    overflow-y  : scroll;
     overflow-x  : hidden;
+}
+
+.custom-font {
+    font-family : 'Trois A Chiffre Test', sans-serif;
+    font-size   : 18px;
+}
+
+@media all and (max-width : 550px) {
+    .custom-font {
+        font-size : 3.25vw;
+    }
+}
+
+@media all and (max-width : 367px) {
+    body {
+        font-size : 4.8vw;
+    }
 }
