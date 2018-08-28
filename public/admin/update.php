@@ -27,12 +27,12 @@ require_once __DIR__.'/vendor/autoload.php';
 
 session_start();
 
-const PAGE_ID         = '2052061238441457';
-const STATIC_ALBUM_ID = '2052072655106982';
+const PAGE_ID         = '602240976801386';
+const STATIC_ALBUM_ID = '670993456592804';
 
 $fb = new \Facebook\Facebook([
-	'app_id'                => '2090066521259797',
-	'app_secret'            => '340e01be925a120b566f3b513ab84eb5',
+	'app_id'                => '331324100778658',
+	'app_secret'            => '4f54f2883086ccd38087c22f2eca5ae1',
 	'default_graph_version' => 'v3.1',
 ]);
 
