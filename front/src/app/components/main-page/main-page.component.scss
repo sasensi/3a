@@ -53,6 +53,10 @@ img {
     margin-bottom : 3px;
 }
 
+:host /deep/ aside a {
+    text-decoration : underline;
+}
+
 @media all and (max-width : 550px) {
     h3 {
         letter-spacing : 0.27vw;
