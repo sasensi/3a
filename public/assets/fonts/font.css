@@ -9,6 +9,11 @@
 }
 
 @font-face {
+    font-family : 'Hershey Times Italic';
+    src         : url('./hershey_times-Italic.otf');
+}
+
+@font-face {
     font-family : 'Trois A Chiffre Regular';
     src         : url('./trois_a_chiffre-Regular.otf');
 }
