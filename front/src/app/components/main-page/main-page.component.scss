@@ -53,8 +53,14 @@ img {
     margin-bottom : 3px;
 }
 
-:host /deep/ aside a {
-    text-decoration : underline;
+:host /deep/ aside {
+    a {
+        text-decoration : underline;
+    }
+
+    i {
+        font-family : 'Hershey Times Italic', sans-serif;
+    }
 }
 
 @media all and (max-width : 550px) {
