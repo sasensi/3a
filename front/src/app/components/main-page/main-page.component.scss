@@ -7,10 +7,6 @@ header {
     cursor        : pointer;
     padding-top   : 6px;
     margin-bottom : 5px;
-
-    &:hover {
-        text-decoration : underline;
-    }
 }
 
 h3 {
@@ -66,5 +62,11 @@ img {
 @media all and (max-width : 550px) {
     h3 {
         letter-spacing : 0.27vw;
+    }
+}
+
+@media (hover : hover) {
+    header:hover {
+        text-decoration : underline;
     }
 }
