@@ -24,8 +24,15 @@ export class AppComponent
         this.userEntered = true;
     }
 
-    scrollToAboutPreview ()
+    onTitleClicked ()
     {
-        this.scrollService.scrollToAbout();
+        if (this.userEntered)
+        {
+            this.scrollService.scrollToAbout();
+        }
+        else
+        {
+            this.userEntered = true;
+        }
     }
 }
