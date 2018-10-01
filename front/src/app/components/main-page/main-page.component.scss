@@ -46,10 +46,12 @@ img {
     max-width     : 100%;
     margin-top    : 3px;
     margin-bottom : 3px;
+    min-height    : 270px;
 }
 
 li.passed img {
     max-height : 466px;
+    min-height : 150px;
 }
 
 :host /deep/ aside {
