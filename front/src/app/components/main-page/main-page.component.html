@@ -3,7 +3,7 @@
     Trois‿a est un espace de travail partagé et de programmation artistique épisodique, situé 3A rue de Turin, dans le quartier Bonnefoy, à Toulouse.
 </header>
 <ul>
-    <li #eventWrapper *ngFor="let event of datas?.events">
+    <li #eventWrapper *ngFor="let event of datas?.events" [class.passed]="isPassed(event)">
         <h3 class="custom-font">
             <span *ngFor="let date of event.dates">{{formatEventDate(date)}}</span>
         </h3>

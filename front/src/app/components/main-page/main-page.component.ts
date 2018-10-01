@@ -62,19 +62,21 @@ export class MainPageComponent implements OnInit, AfterViewInit
         ;
     }
 
+    isPassed ( event: EventModel )
+    {
+        return moment.unix(event.dates[ event.dates.length - 1 ].end).isBefore(moment());
+    }
+
     getEventImages ( event: EventModel )
     {
-        const now           = moment();
-        const eventIsPassed = moment.unix(event.dates[ event.dates.length - 1 ].end).isBefore(now);
-
-        // future
-        if (!eventIsPassed)
-        {
-            return [ event.cover ];
-        }
         // passed
+        if (this.isPassed(event))
         {
             return event.images;
+        }
+        // future
+        {
+            return [ event.cover ];
         }
     }
 
