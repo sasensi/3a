@@ -43,7 +43,7 @@ div + div {
 }
 
 img {
-    max-width     : 100%;
+    max-width     : calc(100% + 4px);
     margin-top    : 3px;
     margin-bottom : 3px;
     min-height    : 270px;
